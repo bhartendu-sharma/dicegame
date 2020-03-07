@@ -153,8 +153,10 @@ img
 	display:none;
 	text-align: left;
 	position: absolute; top:90vh;left: 20vw;
+	color: #1f1f1f;
+	font-weight: 500;
 }
 .highlite-instn
 {
-	font-weight: bold;
+	font-weight: 900;
 }
