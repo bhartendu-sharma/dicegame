@@ -127,3 +127,9 @@ document.querySelector('.btn-hold').addEventListener('click', function () {
     
     
 });
+function showinst()
+ {
+	 document.querySelector('.game-rule-detail').style.display='unset';
+	 document.querySelector('.game-rule').style.display='none' 
+}
+document.querySelector('.btn-game-rule').addEventListener('click',showinst);

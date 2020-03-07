@@ -72,6 +72,7 @@ body
 	position: relative;
 	top:2rem;
 	font-size:2.8rem;
+	color: #00b170;
 }
 .game-container
 {
@@ -91,6 +92,18 @@ button
 	background: transparent;
 	font-weight: 700;
 }
+button:focus
+{
+	outline: none;
+}
+button:hover
+{
+	/*background: #00b170;*/
+	/*border-radius: 10%;*/
+	color: #f03226;
+	font-size: 2rem;
+	transition: .2s;
+}
 .btn-new-game
 {
 	position: absolute; top:10.5vh;
@@ -104,7 +117,7 @@ button
    position: absolute; top: 77vh;
 }
 .final-score
-{
+{   display: none;
 	position: absolute; top: 84vh;
 	height: 2rem; width: 10rem;
 	font-size: 1.8rem;
@@ -114,8 +127,34 @@ img
 	position: absolute; top: 25vh;
 }
 .winner {
-    background-color: #f7f7f7;
+    background: #1f1f1f;
 }
 .active {
-    background: #f7f7f7;
+    background:  #733605;;
+}
+.btn-game-rule
+{
+	color: #f03226;
+	font-size: 2rem;
+
+}
+.btn-game-rule:hover
+{
+	font-weight: bold;
+	font-size: 2.2rem;
+	transition: .2s;
+}
+.game-rule
+{
+		position: absolute; top:90vh;left: 40vw;
+}
+.game-rule-detail
+{
+	display:none;
+	text-align: left;
+	position: absolute; top:90vh;left: 20vw;
+}
+.highlite-instn
+{
+	font-weight: bold;
 }
