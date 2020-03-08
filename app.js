@@ -36,7 +36,7 @@ document.querySelector('.btn-roll-dice').addEventListener('click', function () {
     if (gamePlaying) {
 
         //    2. Generate Two random numbers and store them in variables
-        var dice1 = Math.floor(Math.random() * 6) + 1;
+        var dice1 = Math.floor(Math.random() * 6) + 1;/*(0-5)+1;if use only *7 we get 0-6 ,not 1-6*/
         var dice2 = Math.floor(Math.random() * 6) + 1;
 
 
@@ -51,9 +51,14 @@ document.querySelector('.btn-roll-dice').addEventListener('click', function () {
         if (dice1 !== 1 && dice2 !== 1) {
             // Add Score
             roundScore += dice1 + dice2;
-            document.querySelector('#current-score' + activePlayer).textContent = roundScore;
+            document.querySelector('#current-score-'+activePlayer).textContent = roundScore;
 
-        } else {
+        }
+     
+         else {
+         	document.getElementById('dice-1').src = './images/d-1.png';
+             document.getElementById('dice-2').src = './images/d-1.png';
+
             // Switch Player
             nextPlayer();
         }
@@ -70,8 +75,8 @@ function nextPlayer() {
     document.getElementById('current-score-0').textContent = '0';
     document.getElementById('current-score-1').textContent = '0';
     
-    document.querySelector('.player0-container').classList.toggle('active');
-    document.querySelector('.player1-container').classList.toggle('active');
+    document.querySelector('.player-0-container').classList.toggle('active');
+    document.querySelector('.player-1-container').classList.toggle('active');
     
     document.getElementById('dice-1').style.display = 'none';
     document.getElementById('dice-2').style.display = 'none';
